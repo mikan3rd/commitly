@@ -46,5 +46,6 @@
       "node": { "moduleDirectory": ["node_modules", "src/"] },
       "webpack": { "config": "config/webpack.config.js" }
     }
-  }
+  },
+  "ignorePatterns": ["node_modules", ".next"]
 }
