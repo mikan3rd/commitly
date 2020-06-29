@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { css } from "emotion";
+import { css } from "@emotion/core";
 import Link from "next/link";
 import { Dropdown, Icon, Image } from "semantic-ui-react";
 
@@ -9,7 +9,7 @@ export const Header: React.FC = () => {
     <Wrapper>
       <Link href="/">
         <a
-          className={css`
+          css={css`
             height: 80%;
             margin-left: 10px;
           `}
