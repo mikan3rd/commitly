@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { css } from "emotion";
-
 import Link from "next/link";
 import { Dropdown, Icon, Image } from "semantic-ui-react";
 
