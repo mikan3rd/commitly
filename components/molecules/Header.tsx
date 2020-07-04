@@ -1,12 +1,24 @@
 import React from "react";
-import styled from "@emotion/styled";
 import { css } from "@emotion/core";
 import Link from "next/link";
 import { Dropdown, Icon, Image } from "semantic-ui-react";
 
 export const Header: React.FC = () => {
   return (
-    <Wrapper>
+    <header
+      css={css`
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 60px;
+        background-color: #fdd101;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1;
+      `}
+    >
       <Link href="/">
         <a
           css={css`
@@ -14,38 +26,30 @@ export const Header: React.FC = () => {
             margin-left: 10px;
           `}
         >
-          <LogoImage src="/logo_header.png" />
+          <Image
+            src="/logo_header.png"
+            css={css`
+              height: 100%;
+            `}
+          />
         </a>
       </Link>
 
-      <Dropdown icon={<BarIcon name="bars" size="big" />}>
+      <Dropdown
+        icon={
+          <Icon
+            name="bars"
+            size="big"
+            css={css`
+              &&& {
+                margin-right: 10px;
+              }
+            `}
+          />
+        }
+      >
         <Dropdown.Menu direction="left"></Dropdown.Menu>
       </Dropdown>
-    </Wrapper>
+    </header>
   );
 };
-
-const Wrapper = styled.header`
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 60px;
-  background-color: #fdd101;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 1;
-`;
-
-const LogoImage = styled(Image)`
-  &&& {
-    height: 100%;
-  }
-`;
-
-const BarIcon = styled(Icon)`
-  &&& {
-    margin-right: 10px;
-  }
-`;

@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "@emotion/styled";
+import { css } from "@emotion/core";
 import { Container } from "semantic-ui-react";
 
 import { Header } from "../molecules/Header";
@@ -7,26 +7,25 @@ import { Footer } from "../molecules/Footer";
 
 export const Layout: React.FC = ({ children }) => {
   return (
-    <>
-      <Wrapper>
-        <Header />
-        <MainContainer text>{children}</MainContainer>
-        <Footer />
-      </Wrapper>
-    </>
+    <div
+      css={css`
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+        background-color: #f7f7f7;
+      `}
+    >
+      <Header />
+      <Container
+        text
+        css={css`
+          flex: 1;
+          margin-top: 60px;
+        `}
+      >
+        {children}
+      </Container>
+      <Footer />
+    </div>
   );
 };
-
-const Wrapper = styled.div`
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-  background-color: #f7f7f7;
-`;
-
-const MainContainer = styled(Container)`
-  &&& {
-    flex: 1;
-    margin-top: 60px;
-  }
-`;

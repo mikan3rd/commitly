@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "@emotion/styled";
+import { css } from "@emotion/core";
 import { Grid, Header, Image, Label, Segment } from "semantic-ui-react";
 
 import { LoginButton } from "../molecules/LoginButton";
@@ -16,7 +16,7 @@ export const Index: React.FC = () => {
           <Grid.Row>
             <Grid.Column width="8">
               <Header>あなたのコミットを共有しませんか？</Header>
-              <Text>Commitlyはあなたの書いたコードをプログラミング言語別に集計してシェアするためのサービスです</Text>
+              <p>Commitlyはあなたの書いたコードをプログラミング言語別に集計してシェアするためのサービスです</p>
             </Grid.Column>
             <Grid.Column width="8">
               <a
@@ -35,21 +35,19 @@ export const Index: React.FC = () => {
 
       <Segment vertical textAlign="center" padded="very">
         <Header>あなたのコミットもシェアしよう！</Header>
-        <AlignMiddle>
+        <div
+          css={css`
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          `}
+        >
           <LoginButton />
           <Label pointing="left" size="big" color="blue">
             Join Now!!
           </Label>
-        </AlignMiddle>
+        </div>
       </Segment>
     </>
   );
 };
-
-const Text = styled.p``;
-
-const AlignMiddle = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;

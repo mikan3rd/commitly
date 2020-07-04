@@ -1,12 +1,21 @@
 import React from "react";
-import styled from "@emotion/styled";
+import { css } from "@emotion/core";
 import { Button, Container, Segment } from "semantic-ui-react";
 
 export const Footer: React.FC = () => {
   return (
-    <Wrapper color="grey" inverted attached="bottom">
-      <FooterContainer>
-        <ButtonWrapper>
+    <Segment
+      color="grey"
+      inverted
+      attached="bottom"
+      css={css`
+        &&& {
+          padding: 1em;
+        }
+      `}
+    >
+      <Container>
+        <div css={ButtonCss}>
           <Button
             circular
             color="twitter"
@@ -17,8 +26,8 @@ export const Footer: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
           />
-        </ButtonWrapper>
-        <ButtonWrapper>
+        </div>
+        <div css={ButtonCss}>
           <Button
             circular
             color="black"
@@ -29,21 +38,13 @@ export const Footer: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
           />
-        </ButtonWrapper>
-      </FooterContainer>
-    </Wrapper>
+        </div>
+      </Container>
+    </Segment>
   );
 };
 
-const Wrapper = styled(Segment)`
-  &&& {
-    padding: 1em;
-  }
-`;
-
-const FooterContainer = styled(Container)``;
-
-const ButtonWrapper = styled.div`
-  display: inline-block;
+const ButtonCss = css`
+  display: inline;
   margin-right: 15px;
 `;
