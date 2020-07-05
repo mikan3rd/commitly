@@ -13,6 +13,9 @@
   "dependencies": {
     "@emotion/babel-preset-css-prop": "10.0.27",
     "@emotion/core": "10.0.28",
+    "firebase": "7.15.5",
+    "firebase-admin": "8.13.0",
+    "js-cookie": "2.2.1",
     "next": "9.4.4",
     "react": "16.13.1",
     "react-dom": "16.13.1",
