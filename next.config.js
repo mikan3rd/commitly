@@ -1,4 +1,4 @@
-// On production, variables are set with `now secrets`. On development, they use the .env file
+/* eslint-disable @typescript-eslint/no-var-requires */
 require("dotenv").config();
 
 module.exports = {
