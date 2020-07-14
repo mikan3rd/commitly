@@ -1,6 +1,8 @@
 import dayjs, { Dayjs } from "dayjs";
 import { immerable, produce } from "immer";
 
+import firebase from "../utils/clientApp";
+
 class Github {
   [immerable] = true;
 

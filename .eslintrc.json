@@ -39,10 +39,7 @@
     "react": {
       "version": "detect"
     },
-    "import/ignore": ["node_modules"],
-    "import/resolver": {
-      "node": { "moduleDirectory": ["node_modules", "src/"] }
-    }
+    "import/ignore": ["node_modules"]
   },
   "ignorePatterns": ["node_modules", ".next"]
 }
