@@ -41,8 +41,7 @@
     },
     "import/ignore": ["node_modules"],
     "import/resolver": {
-      "node": { "moduleDirectory": ["node_modules", "src/"] },
-      "webpack": { "config": "config/webpack.config.js" }
+      "node": { "moduleDirectory": ["node_modules", "src/"] }
     }
   },
   "ignorePatterns": ["node_modules", ".next"]
