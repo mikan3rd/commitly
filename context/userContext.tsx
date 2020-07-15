@@ -5,13 +5,6 @@ import { toast } from "react-semantic-toasts";
 import firebase from "../utils/clientApp";
 import { User } from "../models/User";
 
-type UserContextType = {
-  user: firebase.User | null;
-  userDoc: User | null;
-  loadingUser: boolean;
-  login: () => void;
-};
-
 type GithubCredentialType = {
   credential: { accessToken: string };
   additionalUserInfo: { username: string; isNewUser: boolean; profile: { id: number } };
@@ -22,6 +15,14 @@ type TwitterCredentialType = {
   credential: { accessToken: string; secret: string };
   additionalUserInfo: { username: string; isNewUser: boolean; profile: { id_str: string } };
   user: { uid: string };
+};
+
+type UserContextType = {
+  user: firebase.User | null;
+  userDoc: User | null;
+  loadingUser: boolean;
+  login: () => void;
+  logout: () => void;
 };
 
 export const UserContext = React.createContext<UserContextType>(undefined);
@@ -90,11 +91,27 @@ export default function UserContextComp({ children }) {
     }, 500);
   };
 
+  const logout = async () => {
+    await firebase.auth().signOut();
+
+    setUser(null);
+    setUserDoc(null);
+
+    await Router.push("/");
+
+    setTimeout(() => {
+      toast({
+        type: "success",
+        title: "ログアウトしました！",
+      });
+    }, 500);
+  };
+
   React.useEffect(() => {
     setCurrentUser();
   }, []);
 
-  return <UserContext.Provider value={{ user, userDoc, loadingUser, login }}>{children}</UserContext.Provider>;
+  return <UserContext.Provider value={{ user, userDoc, loadingUser, login, logout }}>{children}</UserContext.Provider>;
 }
 
 // Custom hook that shorhands the context!
