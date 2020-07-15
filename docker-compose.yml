@@ -3,7 +3,7 @@ services:
   dev:
     build:
       context: .
-    command: yarn dev
+    tty: true
     ports:
       - "3000:3000"
     volumes:
