@@ -2,7 +2,7 @@ import React from "react";
 import Router from "next/router";
 import { toast } from "react-semantic-toasts";
 
-import firebase from "../utils/clientApp";
+import firebase from "../firebase/clientApp";
 import { User } from "../models/User";
 
 type GithubCredentialType = {
