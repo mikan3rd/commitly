@@ -24,7 +24,7 @@ export const Index: React.FC = () => {
                 data-height="400"
                 href="https://twitter.com/commitly_jp"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noreferrer"
               >
                 Tweets by commitly_jp
               </a>
