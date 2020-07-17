@@ -18,7 +18,6 @@ const tweetTimeOptions = Array.from(Array(24).keys()).map((i) => {
 export const Setting: React.FC = () => {
   const { userDoc, twitterUserData, changeTweetTime } = useUser();
   const tweetTime = userDoc?.setting.tweetTime;
-  console.log(tweetTime);
   return (
     <>
       <Segment vertical>
