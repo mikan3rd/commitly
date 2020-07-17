@@ -21,6 +21,7 @@ type UserContextType = {
   user: firebase.User | null;
   userDoc: User | null;
   loadingUser: boolean;
+  twitterUserData: firebase.UserInfo | null;
   login: () => void;
   logout: () => void;
   twitterConnect: () => void;
@@ -28,7 +29,7 @@ type UserContextType = {
   changeTweetTime: (tweetTime: number) => void;
 };
 
-export const TwitterProviderId = "twitter.com" as const;
+const TwitterProviderId = "twitter.com" as const;
 
 export const UserContext = React.createContext<UserContextType>(undefined);
 
@@ -177,9 +178,21 @@ export default function UserContextComp({ children }) {
     setCurrentUser();
   }, []);
 
+  const twitterUserData = user?.providerData.find((d) => d && d.providerId === TwitterProviderId);
+
   return (
     <UserContext.Provider
-      value={{ user, userDoc, loadingUser, login, logout, twitterConnect, twitterUnconnect, changeTweetTime }}
+      value={{
+        user,
+        userDoc,
+        loadingUser,
+        twitterUserData,
+        login,
+        logout,
+        twitterConnect,
+        twitterUnconnect,
+        changeTweetTime,
+      }}
     >
       {children}
     </UserContext.Provider>
