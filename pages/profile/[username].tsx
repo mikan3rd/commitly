@@ -2,7 +2,7 @@ import React from "react";
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 
 import { Profile } from "../../components/pages/Profile";
-import { getProfileData } from "../../hooks/useProfileData";
+import { getProfileData } from "../../api/profileData";
 import { ProfileData } from "../../models/ProfileData";
 
 const ProfilePage: React.FC<{
