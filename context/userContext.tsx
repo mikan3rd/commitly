@@ -22,11 +22,11 @@ type UserContextType = {
   userDoc: User | null;
   loadingUser: boolean;
   twitterUserData: firebase.UserInfo | null;
-  login: () => void;
-  logout: () => void;
-  twitterConnect: () => void;
-  twitterUnconnect: () => void;
-  changeTweetTime: (tweetTime: number) => void;
+  login: () => Promise<void>;
+  logout: () => Promise<void>;
+  twitterConnect: () => Promise<void>;
+  twitterUnconnect: () => Promise<void>;
+  changeTweetTime: (tweetTime: number) => Promise<void>;
 };
 
 const TwitterProviderId = "twitter.com" as const;
