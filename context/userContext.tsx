@@ -21,9 +21,15 @@ type UserContextType = {
   user: firebase.User | null;
   userDoc: User | null;
   loadingUser: boolean;
-  login: () => void;
-  logout: () => void;
+  twitterUserData: firebase.UserInfo | null;
+  login: () => Promise<void>;
+  logout: () => Promise<void>;
+  twitterConnect: () => Promise<void>;
+  twitterUnconnect: () => Promise<void>;
+  changeTweetTime: (tweetTime: number) => Promise<void>;
 };
+
+const TwitterProviderId = "twitter.com" as const;
 
 export const UserContext = React.createContext<UserContextType>(undefined);
 
@@ -107,11 +113,90 @@ export default function UserContextComp({ children }) {
     }, 500);
   };
 
+  const twitterConnect = async () => {
+    if (!user || !userDoc) {
+      return null;
+    }
+
+    const provider = new firebase.auth.TwitterAuthProvider();
+    provider.setCustomParameters({ force_login: true });
+
+    const userCredential: unknown = await user.linkWithPopup(provider);
+
+    const {
+      credential: { accessToken, secret },
+      additionalUserInfo: {
+        username,
+        profile: { id_str: userId },
+      },
+      user: { uid },
+    } = userCredential as TwitterCredentialType;
+
+    const nextUserDoc = userDoc.setTwitter({ username, userId, accessToken, secret });
+    await updateFirestoreUserDoc(uid, nextUserDoc);
+    await setCurrentUser();
+
+    toast({
+      type: "success",
+      title: "Twitter連携が完了しました！",
+    });
+  };
+
+  const twitterUnconnect = async () => {
+    if (!user || !userDoc) {
+      return null;
+    }
+
+    await user.unlink(TwitterProviderId);
+
+    const nextUserDoc = userDoc.clearTwitter();
+    await updateFirestoreUserDoc(user.uid, nextUserDoc);
+    await setCurrentUser();
+
+    toast({
+      type: "success",
+      title: "Twitter連携を解除しました！",
+    });
+  };
+
+  const changeTweetTime = async (tweetTime: number) => {
+    if (!user || !userDoc) {
+      return null;
+    }
+
+    const nextDoc = userDoc.setSettingTweetTime(tweetTime);
+    await updateFirestoreUserDoc(user.uid, nextDoc);
+    await reloadUserDoc(user.uid);
+
+    toast({
+      type: "success",
+      title: "定期ツイート時刻を設定しました！",
+    });
+  };
+
   React.useEffect(() => {
     setCurrentUser();
   }, []);
 
-  return <UserContext.Provider value={{ user, userDoc, loadingUser, login, logout }}>{children}</UserContext.Provider>;
+  const twitterUserData = user?.providerData.find((d) => d && d.providerId === TwitterProviderId);
+
+  return (
+    <UserContext.Provider
+      value={{
+        user,
+        userDoc,
+        loadingUser,
+        twitterUserData,
+        login,
+        logout,
+        twitterConnect,
+        twitterUnconnect,
+        changeTweetTime,
+      }}
+    >
+      {children}
+    </UserContext.Provider>
+  );
 }
 
 // Custom hook that shorhands the context!
