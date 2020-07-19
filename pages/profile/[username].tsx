@@ -2,6 +2,7 @@ import React from "react";
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 
 import { Profile } from "../../components/pages/Profile";
+import { SEO } from "../../components/templates/SEO";
 import { getProfileData } from "../../api/profileData";
 import { ProfileData } from "../../models/ProfileData";
 
@@ -16,7 +17,12 @@ const ProfilePage: React.FC<{
 
   const profileData = new ProfileData(profileDataJson);
 
-  return <Profile username={username as string} profileData={profileData} />;
+  return (
+    <>
+      <SEO title={username} />
+      <Profile username={username as string} profileData={profileData} />
+    </>
+  );
 };
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
