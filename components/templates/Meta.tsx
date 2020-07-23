@@ -17,6 +17,8 @@ export const Meta = React.memo<{
       <meta name="twitter:description" content={description} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="viewport" content="initial-scale=1, width=device-width" />
+      <link rel="icon" href="/favicon.ico" />
+      <link rel="apple-touch-icon" type="image/png" href="/logo_icon.png" />
     </Head>
   );
 });
