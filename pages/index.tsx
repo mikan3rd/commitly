@@ -1,12 +1,12 @@
 import React from "react";
 
 import { Index } from "../components/pages/Index";
-import { SEO } from "../components/templates/SEO";
+import { Meta } from "../components/templates/Meta";
 
 const IndexPage: React.FC = () => {
   return (
     <>
-      <SEO title="TOP" />
+      <Meta title="TOP" />
       <Index />
     </>
   );

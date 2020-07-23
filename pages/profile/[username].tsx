@@ -2,7 +2,7 @@ import React from "react";
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 
 import { Profile } from "../../components/pages/Profile";
-import { SEO } from "../../components/templates/SEO";
+import { Meta } from "../../components/templates/Meta";
 import { getProfileData } from "../../api/profileData";
 import { ProfileData } from "../../models/ProfileData";
 
@@ -19,7 +19,7 @@ const ProfilePage: React.FC<{
 
   return (
     <>
-      <SEO title={username} />
+      <Meta title={username} />
       <Profile username={username as string} profileData={profileData} />
     </>
   );

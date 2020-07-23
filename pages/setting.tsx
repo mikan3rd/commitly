@@ -1,13 +1,13 @@
 import React from "react";
 
 import { LoginOnly } from "../components/templates/LoginOnly";
-import { SEO } from "../components/templates/SEO";
+import { Meta } from "../components/templates/Meta";
 import { Setting } from "../components/pages/Setting";
 
 const SettingPage: React.FC = () => {
   return (
     <LoginOnly>
-      <SEO title="Setting" />
+      <Meta title="Setting" />
       <Setting />
     </LoginOnly>
   );
