@@ -13,6 +13,9 @@ const nextjsServer = next({
 });
 const nextjsHandle = nextjsServer.getRequestHandler();
 
-exports.nextjsFunc = functions.https.onRequest((req, res) => {
-  return nextjsServer.prepare().then(() => nextjsHandle(req, res));
+// If you are using HTTP functions to serve dynamic content for Firebase Hosting, you must use us-central1.
+// https://firebase.google.com/docs/functions/locations#http_and_client_callable_functions
+exports.nextjsFunc = functions.region("us-central1").https.onRequest(async (req, res) => {
+  await nextjsServer.prepare();
+  return nextjsHandle(req, res);
 });
