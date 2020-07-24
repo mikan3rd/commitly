@@ -4,31 +4,18 @@
   "description": "Host Next.js SSR app on Firebase Cloud Functions with Firebase Hosting redirects.",
   "repository": "https://github.com/jthegedus/firebase-functions-next-example.git",
   "scripts": {
-    "next": "yarn build-firebase && cd \"src/app\" && yarn install",
-    "build": "yarn build-next && yarn build-firebase",
-    "build-next": "cd \"src/app\" && yarn install && yarn build",
-    "build-firebase": "cd \"src/functions\" && yarn install",
-    "preserve": "yarn build-all",
+    "install": "yarn install-next && yarn install-firebase",
+    "install-next": "cd \"src/app\" && yarn install",
+    "install-firebase": "cd \"src/functions\" && yarn install",
+    "build": "yarn build-next",
+    "build-next": "cd \"src/app\" && yarn build",
+    "preserve": "yarn build",
     "serve": "firebase serve",
-    "predeploy": "yarn build-all",
+    "predeploy": "yarn build",
     "deploy": "firebase deploy",
-    "type-check": "cd \"src/app\" && yarn type-check",
-    "lint": "eslint .",
-    "lint:fix": "yarn lint --fix"
-  },
-  "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "3.7.0",
-    "@typescript-eslint/parser": "3.7.0",
-    "eslint": "7.5.0",
-    "eslint-config-prettier": "6.11.0",
-    "eslint-import-resolver-webpack": "0.12.2",
-    "eslint-loader": "4.0.2",
-    "eslint-plugin-emotion": "10.0.27",
-    "eslint-plugin-import": "2.22.0",
-    "eslint-plugin-prettier": "3.1.4",
-    "eslint-plugin-react": "7.20.3",
-    "eslint-plugin-react-hooks": "4.0.8",
-    "prettier": "2.0.5",
-    "typescript": "3.9.7"
+    "type-check": "yarn type-check-next",
+    "type-check-next": "cd \"src/app\" && yarn type-check",
+    "lint": "yarn lint-next",
+    "lint-next": "cd \"src/app\" && yarn lint"
   }
 }
