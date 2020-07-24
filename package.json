@@ -9,7 +9,7 @@
     "start": "next start src/",
     "serve": "yarn build && firebase emulators:start --only functions,hosting",
     "shell": "yarn build && firebase functions:shell",
-    "deploy": "firebase deploy --only functions,hosting",
+    "deploy": "firebase deploy --only functions:nextjsFunc,hosting",
     "logs": "firebase functions:log",
     "type-check": "tsc --noEmit",
     "lint": "eslint .",
