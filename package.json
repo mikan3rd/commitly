@@ -19,17 +19,17 @@
     "@emotion/babel-preset-css-prop": "10.0.27",
     "@emotion/core": "10.0.28",
     "dayjs": "1.8.30",
+    "dotenv": "8.2.0",
     "firebase": "7.17.1",
     "firebase-admin": "8.9.0",
-    "firebase-functions": "3.3.0",
+    "firebase-functions": "3.8.0",
     "immer": "7.0.5",
     "next": "9.4.4",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-semantic-toasts": "0.6.5",
     "semantic-ui-css": "2.4.1",
-    "semantic-ui-react": "1.0.0",
-    "dotenv": "8.2.0"
+    "semantic-ui-react": "1.0.0"
   },
   "devDependencies": {
     "@types/node": "14.0.25",
@@ -45,7 +45,6 @@
     "eslint-plugin-prettier": "3.1.4",
     "eslint-plugin-react": "7.20.3",
     "eslint-plugin-react-hooks": "4.0.8",
-    "firebase-functions-test": "0.1.6",
     "firebase-tools": "8.0.1",
     "prettier": "2.0.5",
     "typescript": "3.9.7"
