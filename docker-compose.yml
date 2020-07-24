@@ -2,10 +2,10 @@ version: "3"
 services:
   app:
     build:
-      context: ./src/app
+      context: ./src
     tty: true
     ports:
       - "3000:3000"
     volumes:
-      - ./src/app:/app
+      - ./src:/app
       - /app/node_modules

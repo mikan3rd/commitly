@@ -16,10 +16,10 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - run: yarn install-all
+      - run: yarn install
 
       - run: yarn type-check
 
       - run: yarn lint
 
-      - run: yarn build-all
+      - run: yarn build

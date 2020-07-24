@@ -1,14 +1,16 @@
 {
   "hosting": {
-    "public": "src/public",
+    "public": "public",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
       {
-        "source": "**/**",
-        "function": "nextApp"
+        "source": "**",
+        "function": "nextjsFunc"
       }
     ]
   },
   "functions": {
-    "source": "src/functions"
+    "source": ".",
+    "predeploy": ["npm --prefix \"$PROJECT_DIR\" install", "npm --prefix \"$PROJECT_DIR\" run build"]
   }
 }
