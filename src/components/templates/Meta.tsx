@@ -12,7 +12,7 @@ export const Meta = React.memo<{
       <meta name="description" content={description} />
       <meta property="og:title" content={titleWithSiteName} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content="/logo.png" />
+      <meta property="og:image" content="https://commitly-5cdad.firebaseapp.com/logo.png" />
       <meta property="og:type" content="website" />
       <meta name="twitter:title" content={titleWithSiteName} />
       <meta name="twitter:description" content={description} />
