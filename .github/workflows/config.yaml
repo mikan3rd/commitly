@@ -53,7 +53,7 @@ jobs:
   deploy:
     if: github.ref == 'refs/heads/master'
     needs: build
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     strategy:
       matrix:
         node-version: [12.x]
@@ -66,9 +66,15 @@ jobs:
           name: .next
           path: .next
 
-      - name: deploy to Firebase Hosting
-        uses: w9jds/firebase-action@master
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
         with:
-          args: deploy --only functions:nextjsFunc,hosting
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install firebase-tools
+        run: yarn global add firebase-tools
+
+      - name: deploy to Firebase Hosting
+        run: yarn deploy -token=${{ secrets.FIREBASE_TOKEN }}
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
