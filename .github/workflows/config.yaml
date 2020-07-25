@@ -71,8 +71,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Install firebase-tools
-        run: yarn global add firebase-tools
+      - run: yarn install
 
       - name: deploy to Firebase Hosting
         run: yarn deploy --token=${{ secrets.FIREBASE_TOKEN }}
