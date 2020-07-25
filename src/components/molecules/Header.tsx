@@ -31,6 +31,7 @@ export const Header: React.FC = () => {
         >
           <Image
             src="/logo_header.png"
+            alt="logo_header"
             css={css`
               height: 100%;
             `}
