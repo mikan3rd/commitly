@@ -8,7 +8,7 @@ export const Index: React.FC = () => {
   return (
     <>
       <Segment vertical>
-        <Image src="/logo.png" />
+        <Image src="/logo.png" alt="logo" />
       </Segment>
 
       <Segment vertical>
