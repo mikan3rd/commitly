@@ -61,7 +61,7 @@ jobs:
       - uses: actions/checkout@main
 
       - name: Download Artifact
-        uses: actions/download-artifact@master
+        uses: actions/download-artifact@main
         with:
           name: .next
           path: .next
