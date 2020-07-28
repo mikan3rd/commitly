@@ -5,6 +5,12 @@ import { Grid, Header, Image, Label, Segment } from "semantic-ui-react";
 import { LoginButton } from "../molecules/LoginButton";
 
 export const Index: React.FC = () => {
+  React.useEffect(() => {
+    const s = document.createElement("script");
+    s.setAttribute("src", "https://platform.twitter.com/widgets.js");
+    s.setAttribute("async", "true");
+    document.head.appendChild(s);
+  }, []);
   return (
     <>
       <Segment vertical>
