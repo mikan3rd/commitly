@@ -1336,9 +1336,9 @@
     teeny-request "^7.0.0"
 
 "@google-cloud/firestore@^4.0.0":
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/@google-cloud/firestore/-/firestore-4.1.1.tgz#bd7478cbead2d516cc8d173339198180ad7f6e35"
-  integrity sha512-HFy2OEOrYJ7jYUir90Kg7+AWM6fsFoWYiHiryoseHfkL9//AnXm2sn0CiaOhsTsxphc69G8LBBvUj6ws0QDa7g==
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/@google-cloud/firestore/-/firestore-4.1.2.tgz#cd02fb5bb569479bd7646595837bc2864057c2f3"
+  integrity sha512-7umbcN03Fviw5J1imNj+IC1KVKXDDqmxxrDA5QNs8j8ufmpMBlre79nPW78or5OTqruSSDpdV9Tu8/gV+XiMjg==
   dependencies:
     fast-deep-equal "^3.1.1"
     functional-red-black-tree "^1.0.1"
@@ -1572,12 +1572,7 @@
   resolved "https://registry.yarnpkg.com/@types/mime/-/mime-2.0.3.tgz#c893b73721db73699943bfc3653b1deb7faa4a3a"
   integrity sha512-Jus9s4CDbqwocc5pOAnh8ShfrnMcPHuJYzVcSUU7lrh8Ni5HuIqX3oilL86p3dlTrk0LzHRCgA/GQ7uNCw6l2Q==
 
-"@types/node@*":
-  version "14.0.26"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.0.26.tgz#22a3b8a46510da8944b67bfc27df02c34a35331c"
-  integrity sha512-W+fpe5s91FBGE0pEa0lnqGLL4USgpLgs4nokw16SrBBco/gQxuua7KnArSEOd5iaMqbbSHV10vUDkJYJJqpXKA==
-
-"@types/node@14.0.27":
+"@types/node@*", "@types/node@14.0.27":
   version "14.0.27"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.0.27.tgz#a151873af5a5e851b51b3b065c9e63390a9e0eb1"
   integrity sha512-kVrqXhbclHNHGu9ztnAwSncIgJv/FaxmzXJvGXNdcCpV1b8u1/Mi6z6m0vwy0LzKeXFTPLH0NzwmoJ3fNCIq0g==
@@ -1626,9 +1621,9 @@
     csstype "^2.2.0"
 
 "@types/serve-static@*":
-  version "1.13.4"
-  resolved "https://registry.yarnpkg.com/@types/serve-static/-/serve-static-1.13.4.tgz#6662a93583e5a6cabca1b23592eb91e12fa80e7c"
-  integrity sha512-jTDt0o/YbpNwZbQmE/+2e+lfjJEJJR0I3OFaKQKPWkASkCoW3i6fsUnqudSMcNAfbtmADGu8f4MV4q+GqULmug==
+  version "1.13.5"
+  resolved "https://registry.yarnpkg.com/@types/serve-static/-/serve-static-1.13.5.tgz#3d25d941a18415d3ab092def846e135a08bbcf53"
+  integrity sha512-6M64P58N+OXjU432WoLLBQxbA0LRGBCRm7aAGQJ+SMC1IMl0dgRVi9EFfoDcS2a7Xogygk/eGN94CfwU9UF7UQ==
   dependencies:
     "@types/express-serve-static-core" "*"
     "@types/mime" "*"
@@ -1910,9 +1905,9 @@ ajv-errors@^1.0.0:
   integrity sha512-DCRfO/4nQ+89p/RK43i8Ezd41EqdGIU4ld7nGF8OQ14oc/we5rEntLCUa7+jrn3nn83BosfwZA0wb4pon2o8iQ==
 
 ajv-keywords@^3.1.0, ajv-keywords@^3.4.1:
-  version "3.5.1"
-  resolved "https://registry.yarnpkg.com/ajv-keywords/-/ajv-keywords-3.5.1.tgz#b83ca89c5d42d69031f424cad49aada0236c6957"
-  integrity sha512-KWcq3xN8fDjSB+IMoh2VaXVhRI0BBGxoYp3rx7Pkb6z0cFjYR9Q9l4yZqqals0/zsioCmocC5H6UvsGD4MoIBA==
+  version "3.5.2"
+  resolved "https://registry.yarnpkg.com/ajv-keywords/-/ajv-keywords-3.5.2.tgz#31f29da5ab6e00d1c2d329acf7b5929614d5014d"
+  integrity sha512-5p6WTN0DdTGVQk6VjcEju19IgaHudalcfabD7yhDGeA6bcQnmL+CpveLJq/3hvfwd1aof6L386Ougkx6RfyMIQ==
 
 ajv@^6.1.0, ajv@^6.10.0, ajv@^6.10.2, ajv@^6.12.0, ajv@^6.12.2:
   version "6.12.3"
@@ -2492,9 +2487,9 @@ caniuse-api@^3.0.0:
     lodash.uniq "^4.5.0"
 
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001093:
-  version "1.0.30001106"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001106.tgz#7e2132711295ef30ffe5ee45b71936354d105d8c"
-  integrity sha512-XqSQKt9Fd3Z9BoN0cpSaITcTInKhMNGkaWtQ4rDnyQU1BJzzWDWCUi3cJflaPWk2kbrkYkfMrMrjIFzb3kd6NQ==
+  version "1.0.30001107"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001107.tgz#809360df7a5b3458f627aa46b0f6ed6d5239da9a"
+  integrity sha512-86rCH+G8onCmdN4VZzJet5uPELII59cUzDphko3thQFgAQG1RNa+sVLDoALIhRYmflo5iSIzWY3vu1XTWtNMQQ==
 
 chalk@4.0.0:
   version "4.0.0"
@@ -3365,9 +3360,9 @@ ee-first@1.1.1:
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
 electron-to-chromium@^1.3.488:
-  version "1.3.509"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.509.tgz#830fcb89cd66dc2984d18d794973b99e3f00584c"
-  integrity sha512-cN4lkjNRuTG8rtAqTOVgwpecEC2kbKA04PG6YijcKGHK/kD0xLjiqExcAOmLUwtXZRF8cBeam2I0VZcih919Ug==
+  version "1.3.512"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.512.tgz#620e6731c693ddaaf3750f23dde7f7c4347b7327"
+  integrity sha512-y02hdFg7c4jTfREcXf4fRhHLt7BzofMgd7JAKY+u9i62E0D1eIpLQPFo5/eboZL0bIVY9YHZA53+vCGNFREOXA==
 
 elliptic@^6.0.0, elliptic@^6.5.2:
   version "6.5.3"
@@ -4274,9 +4269,9 @@ graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.2, graceful-fs@^4.1.6
   integrity sha512-WjKPNJF79dtJAVniUlGGWHYGz2jWxT6VhN/4m1NdkbZ2nOsEF+cI1Edgql5zCRhs/VsQYRvrXctxktVXZUkixw==
 
 gtoken@^5.0.0:
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/gtoken/-/gtoken-5.0.2.tgz#688e4334b99378b4d4a67add19e1680f411ba74d"
-  integrity sha512-lull70rHCTvRTmAt+R/6W5bTtx4MjHku7AwJwK5fGqhOmygcZud0nrZcX+QUNfBJwCzqy7S5i1Bc4NYnr5PMMA==
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/gtoken/-/gtoken-5.0.3.tgz#b76ef8e9a2fed6fef165e47f7d05b60c498e4d05"
+  integrity sha512-Nyd1wZCMRc2dj/mAD0LlfQLcAO06uKdpKJXvK85SGrF5+5+Bpfil9u/2aw35ltvEHjvl0h5FMKN5knEU+9JrOg==
   dependencies:
     gaxios "^3.0.0"
     google-p12-pem "^3.0.0"
@@ -5397,9 +5392,9 @@ minipass-flush@^1.0.5:
     minipass "^3.0.0"
 
 minipass-pipeline@^1.2.2:
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/minipass-pipeline/-/minipass-pipeline-1.2.3.tgz#55f7839307d74859d6e8ada9c3ebe72cec216a34"
-  integrity sha512-cFOknTvng5vqnwOpDsZTWhNll6Jf8o2x+/diplafmxpuIymAjzoOolZG0VvQf3V2HgqzJNhnuKHYp2BqDgz8IQ==
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/minipass-pipeline/-/minipass-pipeline-1.2.4.tgz#68472f79711c084657c067c5c6ad93cddea8214c"
+  integrity sha512-xuIq7cIOt09RPRJ19gdi4b+RiNvDFYe5JH+ggNvBqGqpQXcru3PcRmOZuHBKWK1Txf9+cQ+HMVN4d6z46LZP7A==
   dependencies:
     minipass "^3.0.0"
 
@@ -7959,9 +7954,9 @@ utils-merge@1.0.1:
   integrity sha1-n5VxD1CiZ5R7LMwSR0HBAoQn5xM=
 
 uuid@^8.0.0:
-  version "8.2.0"
-  resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.2.0.tgz#cb10dd6b118e2dada7d0cd9730ba7417c93d920e"
-  integrity sha512-CYpGiFTUrmI6OBMkAdjSDM0k5h8SkkiTP4WAjQgDgNB1S3Ou9VBEvr6q0Kv2H1mMk7IWfxYGpMH5sd5AvcIV2Q==
+  version "8.3.0"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.0.tgz#ab738085ca22dc9a8c92725e459b1d507df5d6ea"
+  integrity sha512-fX6Z5o4m6XsXBdli9g7DtWgAx+osMsRRZFKma1mIUsLCz6vRvv+pz5VNbyu9UEDzpMWulZfvpgb/cmDXVulYFQ==
 
 v8-compile-cache@^2.0.3:
   version "2.1.1"
