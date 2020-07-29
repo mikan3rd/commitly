@@ -5,10 +5,16 @@ import { Grid, Header, Image, Label, Segment } from "semantic-ui-react";
 import { LoginButton } from "../molecules/LoginButton";
 
 export const Index: React.FC = () => {
+  React.useEffect(() => {
+    const s = document.createElement("script");
+    s.setAttribute("src", "https://platform.twitter.com/widgets.js");
+    s.setAttribute("async", "true");
+    document.head.appendChild(s);
+  }, []);
   return (
     <>
       <Segment vertical>
-        <Image src="/logo.png" />
+        <Image src="/logo.png" alt="logo" />
       </Segment>
 
       <Segment vertical>
@@ -24,7 +30,7 @@ export const Index: React.FC = () => {
                 data-height="400"
                 href="https://twitter.com/commitly_jp"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noreferrer"
               >
                 Tweets by commitly_jp
               </a>
@@ -35,15 +41,32 @@ export const Index: React.FC = () => {
 
       <Segment vertical textAlign="center" padded="very">
         <Header>あなたのコミットもシェアしよう！</Header>
-        <div
+        <LoginButton />
+
+        <Label
+          pointing="left"
+          size="big"
+          color="blue"
           css={css`
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            &&& {
+              @media (max-width: 420px) {
+                display: none;
+              }
+            }
           `}
         >
-          <LoginButton />
-          <Label pointing="left" size="big" color="blue">
+          Join Now!!
+        </Label>
+
+        <div
+          css={css`
+            display: none;
+            @media (max-width: 420px) {
+              display: block;
+            }
+          `}
+        >
+          <Label pointing="above" size="huge" color="blue">
             Join Now!!
           </Label>
         </div>
