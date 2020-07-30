@@ -945,7 +945,7 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.1.2", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4":
+"@babel/runtime@^7.1.2", "@babel/runtime@^7.10.5", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4":
   version "7.10.5"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.10.5.tgz#303d8bd440ecd5a491eae6117fd3367698674c5c"
   integrity sha512-otddXKhdNn7d0ptoFRHtMLa8LqDxLYwTjB4nYgM1yy5N6gU/MUf8zqyyLltCH3yAVitBzmwK4us+DD0l/MauAg==
@@ -5004,7 +5004,7 @@ jws@^4.0.0:
     jwa "^2.0.0"
     safe-buffer "^5.0.1"
 
-keyboard-key@^1.0.4:
+keyboard-key@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/keyboard-key/-/keyboard-key-1.1.0.tgz#6f2e8e37fa11475bb1f1d65d5174f1b35653f5b7"
   integrity sha512-qkBzPTi3rlAKvX7k0/ub44sqOfXeLc/jcnGGmj5c7BJpU8eDrEVPyhCvNYAaoubbsLm9uGWwQJO1ytQK1a9/dQ==
@@ -6661,7 +6661,7 @@ react-is@16.13.1, react-is@^16.6.3, react-is@^16.8.1, react-is@^16.8.6:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-react-popper@^1.3.4:
+react-popper@^1.3.7:
   version "1.3.7"
   resolved "https://registry.yarnpkg.com/react-popper/-/react-popper-1.3.7.tgz#f6a3471362ef1f0d10a4963673789de1baca2324"
   integrity sha512-nmqYTx7QVjCm3WUZLeuOomna138R1luC4EqkW3hxJUrAe+3eNz3oFCLYdnPwILfn0mX1Ew2c3wctrjlUMYYUww==
@@ -7024,21 +7024,21 @@ semantic-ui-css@2.4.1:
   dependencies:
     jquery x.*
 
-semantic-ui-react@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/semantic-ui-react/-/semantic-ui-react-1.0.0.tgz#5d9f6fc29a63a6f16413e9bea93fe4031332cc03"
-  integrity sha512-85mYHYuDBNa6la1BgKwuOSD1vcIPsFQEXRxGsZ9pUtE4iHlEcylF+x46NYHIGbBjlys63SpNH3PtK6VyZj9LBw==
+semantic-ui-react@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/semantic-ui-react/-/semantic-ui-react-1.1.0.tgz#efbb1f4e3a7063d6d7e3032a2ac58d8841f837d1"
+  integrity sha512-gVXgn+ZEUo2pyRTZB566PcSLqEJWx5rCnba+fwzGp3fWBRhio1lcNKt0o2tNldiJFLkMexGRceXQiTWcscD8eA==
   dependencies:
-    "@babel/runtime" "^7.1.2"
+    "@babel/runtime" "^7.10.5"
     "@semantic-ui-react/event-stack" "^3.1.0"
     "@stardust-ui/react-component-event-listener" "~0.38.0"
     "@stardust-ui/react-component-ref" "~0.38.0"
     classnames "^2.2.6"
-    keyboard-key "^1.0.4"
-    lodash "^4.17.15"
+    keyboard-key "^1.1.0"
+    lodash "^4.17.19"
     prop-types "^15.7.2"
     react-is "^16.8.6"
-    react-popper "^1.3.4"
+    react-popper "^1.3.7"
     shallowequal "^1.1.0"
 
 "semver@2 || 3 || 4 || 5", semver@^5.4.1, semver@^5.5.0, semver@^5.5.1, semver@^5.6.0, semver@^5.7.1:
