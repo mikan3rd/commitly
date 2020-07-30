@@ -3,7 +3,7 @@ import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 
 import { Profile } from "../../components/pages/Profile";
 import { Meta } from "../../components/templates/Meta";
-import { getProfileData } from "../../api/profileData";
+import { getProfileData } from "../../apiClient/profileData";
 import { ProfileData } from "../../models/ProfileData";
 
 const ProfilePage: React.FC<{
