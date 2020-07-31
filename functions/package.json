@@ -2,23 +2,30 @@
   "name": "functions",
   "scripts": {
     "build": "tsc",
-    "serve": "npm run build && firebase emulators:start --only functions",
-    "shell": "npm run build && firebase functions:shell",
-    "start": "npm run shell",
+    "serve": "yarn build && firebase emulators:start --only functions",
+    "shell": "yarn build && firebase functions:shell",
+    "start": "yarn shell",
     "deploy": "firebase deploy --only functions",
     "logs": "firebase functions:log"
   },
   "engines": {
-    "node": "10"
+    "node": "12"
   },
   "main": "lib/index.js",
   "dependencies": {
-    "firebase-admin": "^8.10.0",
-    "firebase-functions": "^3.6.1"
+    "@google-cloud/pubsub": "1.7.3",
+    "@types/twitter": "1.7.0",
+    "axios": "0.19.2",
+    "dayjs": "1.8.30",
+    "firebase-admin": "8.13.0",
+    "firebase-functions": "3.8.0",
+    "jsonwebtoken": "8.5.1",
+    "twitter": "1.7.1"
   },
   "devDependencies": {
-    "typescript": "^3.8.0",
-    "firebase-functions-test": "^0.2.0"
+    "@types/jsonwebtoken": "8.5.0",
+    "firebase-functions-test": "0.2.1",
+    "typescript": "3.9.7"
   },
-  "private": true
+  "license": "MIT"
 }
