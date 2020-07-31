@@ -1,6 +1,7 @@
-import { DailyCommitDocType, dailyCommitCollection, userCollection } from "../firebase/nodeApp";
+import admin, { DailyCommitDocType, DailyCommitsCollectionPath, UserCollectionPath } from "../firebase/nodeApp";
 
 export const getProfileData = async (username: string) => {
+  const userCollection = admin.firestore().collection(UserCollectionPath);
   const userDocs = await userCollection.where("github.username", "==", username).limit(1).get();
 
   if (userDocs.empty) {
@@ -12,6 +13,7 @@ export const getProfileData = async (username: string) => {
     userData = doc.data();
   });
 
+  const dailyCommitCollection = admin.firestore().collection(DailyCommitsCollectionPath);
   const commitDocs = await dailyCommitCollection
     .where("userId", "==", userData.github.userId)
     .orderBy("date", "desc")
