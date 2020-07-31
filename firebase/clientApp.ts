@@ -13,9 +13,11 @@ const clientCredentials = {
   storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
   messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
   appId: process.env.FIREBASE_APP_ID,
+  measurementId: process.env.FIREBASE_MEASUREMENT_ID,
 };
 
-if (!firebase.apps.length) {
+// Check that `window` is in scope for the analytics module!
+if (typeof window !== "undefined" && !firebase.apps.length) {
   firebase.initializeApp(clientCredentials);
   // To enable analytics. https://firebase.google.com/docs/analytics/get-started
   if ("measurementId" in clientCredentials) firebase.analytics();
