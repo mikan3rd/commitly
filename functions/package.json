@@ -6,6 +6,7 @@
     "shell": "yarn build && firebase functions:shell",
     "start": "yarn shell",
     "deploy": "firebase deploy --only functions",
+    "deploy:prod": "firebase deploy --only functions --force",
     "logs": "firebase functions:log",
     "lint": "eslint .",
     "lint:fix": "yarn lint --fix"
