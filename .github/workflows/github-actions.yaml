@@ -28,12 +28,16 @@ jobs:
           restore-keys: ${{ runner.os }}-yarn-
 
       - run: yarn install
+        working-directory: ./app
 
-      - run: yarn app:type-check
+      - run: yarn type-check
+        working-directory: ./app
 
-      - run: yarn app:lint
+      - run: yarn lint
+        working-directory: ./app
 
       - run: yarn app:build
+        working-directory: ./app
         env:
           FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}
           FIREBASE_AUTH_DOMAIN: ${{ secrets.FIREBASE_AUTH_DOMAIN }}
@@ -71,7 +75,10 @@ jobs:
           restore-keys: ${{ runner.os }}-yarn-
 
       - run: yarn install
+        working-directory: ./functions
 
-      - run: yarn functions:lint
+      - run: yarn lint
+        working-directory: ./functions
 
-      - run: yarn functions:build
+      - run: yarn build
+        working-directory: ./functions
