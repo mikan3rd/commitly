@@ -1,4 +1,14 @@
 {
+  "hosting": {
+    "public": "app/public",
+    "redirects": [
+      {
+        "source": "*",
+        "destination": "https://commitly-next-web.vercel.app",
+        "type": 301
+      }
+    ]
+  },
   "firestore": {
     "rules": "firestore.rules",
     "indexes": "firestore.indexes.json"
