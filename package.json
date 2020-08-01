@@ -2,9 +2,9 @@
   "name": "commitly-next-web",
   "version": "1.0.0",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "next dev app/",
+    "build": "next build app/",
+    "start": "next start app/",
     "type-check": "tsc --noEmit",
     "lint": "eslint .",
     "lint:fix": "yarn lint --fix"
