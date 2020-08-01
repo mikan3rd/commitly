@@ -40,7 +40,7 @@
     "react": {
       "version": "detect"
     },
-    "import/ignore": ["node_modules"]
+    "import/ignore": ["node_modules", "functions/lib"]
   },
-  "ignorePatterns": ["node_modules", ".next"]
+  "ignorePatterns": ["node_modules", "functions/lib", ".next"]
 }
