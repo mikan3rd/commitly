@@ -2361,7 +2361,7 @@ firebase-functions@3.8.0:
     express "^4.17.1"
     lodash "^4.17.14"
 
-firebase-tools@^8.6.0:
+firebase-tools@8.6.0:
   version "8.6.0"
   resolved "https://registry.yarnpkg.com/firebase-tools/-/firebase-tools-8.6.0.tgz#c18533131170d2e9d069d50ed83ff62d49209e50"
   integrity sha512-8w4vIe7LIMltnxqUyYeZ55YPA+fvmIh0P75ML+b8lt5XT0C1MIs/y2ft4Zh6SetKLTyB3wjz0btdf6MeUkRsbQ==
