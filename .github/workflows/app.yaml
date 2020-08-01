@@ -29,11 +29,11 @@ jobs:
 
       - run: yarn install
 
-      - run: yarn type-check
+      - run: yarn app:type-check
 
-      - run: yarn lint
+      - run: yarn app:lint
 
-      - run: yarn build
+      - run: yarn app:build
         env:
           FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}
           FIREBASE_AUTH_DOMAIN: ${{ secrets.FIREBASE_AUTH_DOMAIN }}
