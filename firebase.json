@@ -3,7 +3,7 @@
     "public": "app/public",
     "redirects": [
       {
-        "source": "*",
+        "source": "**",
         "destination": "https://commitly-next-web.vercel.app",
         "type": 301
       }
