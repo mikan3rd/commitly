@@ -85,10 +85,9 @@ jobs:
 
       - name: Archive Production Artifact
         uses: actions/upload-artifact@main
-        working-directory: ./functions
         with:
-          name: lib
-          path: lib
+          name: functions/lib
+          path: functions/lib
 
   functions-deploy:
     if: github.ref == 'refs/heads/master'
@@ -102,10 +101,9 @@ jobs:
 
       - name: Download Artifact
         uses: actions/download-artifact@main
-        working-directory: ./functions
         with:
-          name: lib
-          path: lib
+          name: functions/lib
+          path: functions/lib
 
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
