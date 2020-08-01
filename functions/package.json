@@ -6,7 +6,7 @@
     "shell": "yarn build && firebase functions:shell",
     "start": "yarn shell",
     "deploy": "firebase deploy --only functions",
-    "deploy:prod": "firebase deploy --only functions --force",
+    "deploy:prod": "yarn deploy --force",
     "logs": "firebase functions:log",
     "lint": "eslint .",
     "lint:fix": "yarn lint --fix"
@@ -34,8 +34,9 @@
     "eslint-loader": "4.0.2",
     "eslint-plugin-import": "2.22.0",
     "eslint-plugin-prettier": "3.1.4",
+    "firebase-functions-test": "0.2.1",
+    "firebase-tools": "^8.6.0",
     "prettier": "2.0.5",
-    "typescript": "3.9.7",
-    "firebase-functions-test": "0.2.1"
+    "typescript": "3.9.7"
   }
 }

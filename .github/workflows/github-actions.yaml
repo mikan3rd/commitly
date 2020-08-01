@@ -124,7 +124,7 @@ jobs:
       - run: yarn install
         working-directory: ./functions
 
-      - name: deploy to Firebase Hosting
+      - name: deploy to Firebase Functions
         working-directory: ./functions
         run: yarn deploy:prod --token=${{ secrets.FIREBASE_TOKEN }}
         env:
