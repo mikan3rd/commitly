@@ -36,7 +36,7 @@ jobs:
       - run: yarn lint
         working-directory: ./app
 
-      - run: yarn app:build
+      - run: yarn build
         working-directory: ./app
         env:
           FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}
