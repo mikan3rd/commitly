@@ -3,7 +3,7 @@ name: Node.js CI
 on: [push]
 
 jobs:
-  build:
+  functions-build:
     runs-on: macos-latest
     strategy:
       matrix:
