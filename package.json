@@ -5,7 +5,7 @@
     "app:dev": "next dev app/",
     "app:build": "next build app/",
     "app:start": "next start app/",
-    "app:type-check": "tsc app --noEmit",
+    "app:type-check": "tsc -p app/tsconfig.json --noEmit",
     "app:lint": "eslint app",
     "functions:build": "tsc -p functions/tsconfig.json",
     "functions:serve": "yarn functions:build && firebase emulators:start --only functions",
