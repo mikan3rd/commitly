@@ -34,7 +34,7 @@ export const Footer: React.FC = () => {
             icon="github"
             size="small"
             as="a"
-            href="https://github.com/mikan3rd/commitly-web"
+            href="https://github.com/mikan3rd/commitly"
             target="_blank"
             rel="noopener noreferrer"
           />
