@@ -19,7 +19,7 @@
     "@google-cloud/pubsub": "1.7.3",
     "@types/twitter": "1.7.0",
     "axios": "0.19.2",
-    "dayjs": "1.8.30",
+    "dayjs": "1.8.32",
     "firebase-admin": "8.13.0",
     "firebase-functions": "3.8.0",
     "jsonwebtoken": "8.5.1",
