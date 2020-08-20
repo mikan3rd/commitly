@@ -14,7 +14,7 @@
     "@emotion/core": "10.0.35",
     "dayjs": "1.8.34",
     "dotenv": "8.2.0",
-    "firebase": "7.18.0",
+    "firebase": "7.19.0",
     "firebase-admin": "8.13.0",
     "firebase-functions": "3.9.0",
     "immer": "7.0.7",
