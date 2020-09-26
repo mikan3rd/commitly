@@ -19,16 +19,18 @@ export const githubWebhook = functions.region("asia-northeast1").https.onRequest
   const { method, headers, body } = request;
 
   if (method !== "POST") {
-    return response.status(400).send(`Method Not Allowed: ${method}`);
+    response.status(400).send(`Method Not Allowed: ${method}`);
+    return;
   }
 
   const eventType = headers["x-github-event"] as string;
   if (eventType !== "push") {
-    return response.status(400).send(`EventType Not Matched: ${eventType}`);
+    response.status(400).send(`EventType Not Matched: ${eventType}`);
+    return;
   }
 
   const result = await publishCommit(body as WebhookPushEventType);
-  return response.send(result);
+  response.send(result);
 });
 
 export const addCommitPubSub = functions
