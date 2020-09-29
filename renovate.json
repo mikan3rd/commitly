@@ -4,8 +4,10 @@
   "labels": ["renovate"],
   "packageRules": [
     {
+      "groupName": "minor dependencies",
       "updateTypes": ["minor", "patch", "pin", "digest", "lockFileMaintenance"],
-      "groupName": "minor dependencies"
+      "schedule": "on saturday",
+      "automerge": true
     }
   ]
 }
