@@ -16,7 +16,7 @@
   },
   "main": "lib/index.js",
   "dependencies": {
-    "@google-cloud/pubsub": "2.8.0",
+    "@google-cloud/pubsub": "2.9.0",
     "@types/twitter": "1.7.0",
     "axios": "0.21.1",
     "dayjs": "1.10.4",
