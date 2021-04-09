@@ -26,8 +26,8 @@
     "twitter": "1.7.1"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "4.20.0",
-    "@typescript-eslint/parser": "4.20.0",
+    "@typescript-eslint/eslint-plugin": "4.21.0",
+    "@typescript-eslint/parser": "4.21.0",
     "eslint": "7.23.0",
     "eslint-config-prettier": "6.15.0",
     "eslint-import-resolver-webpack": "0.13.0",
@@ -37,6 +37,6 @@
     "firebase-functions-test": "0.2.3",
     "firebase-tools": "8.20.0",
     "prettier": "2.2.1",
-    "typescript": "4.2.3"
+    "typescript": "4.2.4"
   }
 }
