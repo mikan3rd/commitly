@@ -13,7 +13,7 @@
     "@emotion/babel-preset-css-prop": "10.2.1",
     "@emotion/core": "10.1.1",
     "dayjs": "1.10.4",
-    "dotenv": "8.2.0",
+    "dotenv": "8.6.0",
     "firebase": "7.24.0",
     "firebase-admin": "8.13.0",
     "firebase-functions": "3.13.2",
@@ -26,10 +26,10 @@
     "semantic-ui-react": "2.0.3"
   },
   "devDependencies": {
-    "@types/node": "14.14.43",
-    "@types/react": "17.0.4",
-    "@typescript-eslint/eslint-plugin": "4.22.0",
-    "@typescript-eslint/parser": "4.22.0",
+    "@types/node": "14.14.44",
+    "@types/react": "17.0.5",
+    "@typescript-eslint/eslint-plugin": "4.22.1",
+    "@typescript-eslint/parser": "4.22.1",
     "eslint": "7.25.0",
     "eslint-config-prettier": "6.15.0",
     "eslint-import-resolver-webpack": "0.13.0",
