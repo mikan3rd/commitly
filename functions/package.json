@@ -26,8 +26,8 @@
     "twitter": "1.7.1"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "4.22.0",
-    "@typescript-eslint/parser": "4.22.0",
+    "@typescript-eslint/eslint-plugin": "4.22.1",
+    "@typescript-eslint/parser": "4.22.1",
     "eslint": "7.25.0",
     "eslint-config-prettier": "6.15.0",
     "eslint-import-resolver-webpack": "0.13.0",
