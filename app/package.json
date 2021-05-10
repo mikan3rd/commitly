@@ -13,7 +13,7 @@
     "@emotion/babel-preset-css-prop": "10.2.1",
     "@emotion/core": "10.1.1",
     "dayjs": "1.10.4",
-    "dotenv": "8.6.0",
+    "dotenv": "9.0.2",
     "firebase": "7.24.0",
     "firebase-admin": "8.13.0",
     "firebase-functions": "3.13.2",
