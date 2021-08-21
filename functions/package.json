@@ -33,7 +33,7 @@
     "eslint-import-resolver-webpack": "0.13.1",
     "eslint-loader": "4.0.2",
     "eslint-plugin-import": "2.24.1",
-    "eslint-plugin-prettier": "3.4.0",
+    "eslint-plugin-prettier": "3.4.1",
     "firebase-functions-test": "0.3.2",
     "firebase-tools": "8.20.0",
     "prettier": "2.3.2",
