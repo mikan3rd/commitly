@@ -16,7 +16,7 @@
     "dotenv": "8.6.0",
     "firebase": "7.24.0",
     "firebase-admin": "8.13.0",
-    "firebase-functions": "3.15.7",
+    "firebase-functions": "3.16.0",
     "immer": "8.0.4",
     "next": "9.5.5",
     "react": "17.0.2",
@@ -26,8 +26,8 @@
     "semantic-ui-react": "2.0.4"
   },
   "devDependencies": {
-    "@types/node": "14.17.31",
-    "@types/react": "17.0.32",
+    "@types/node": "14.17.32",
+    "@types/react": "17.0.33",
     "@typescript-eslint/eslint-plugin": "4.33.0",
     "@typescript-eslint/parser": "4.33.0",
     "eslint": "7.32.0",
