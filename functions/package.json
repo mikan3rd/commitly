@@ -20,7 +20,7 @@
     "@types/twitter": "1.7.1",
     "axios": "0.24.0",
     "dayjs": "1.10.7",
-    "firebase-admin": "8.13.0",
+    "firebase-admin": "10.2.0",
     "firebase-functions": "3.16.0",
     "jsonwebtoken": "8.5.1",
     "twitter": "1.7.1"
